@@ -33,17 +33,12 @@ public class Check {
             if (ratio == 1) {
                 continue;
             }
-            int count = 0;
             BitSet bitSet = new BitSet();
             for (int i = 0; i < s.length(); i++) {
-                char c = s.charAt(i);
-                if (bitSet.get(c)) {
-                    continue;
-                }
-                bitSet.set(c);
-                count++;
+                bitSet.set(s.charAt(i));
+
             }
-            list.add(new Node(bitSet, count));
+            list.add(new Node(bitSet, bitSet.cardinality()));
         }
         Collections.sort(list);
     }
