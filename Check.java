@@ -76,7 +76,7 @@ public class Check {
     }
 
 
-    private static int firstGte(List<Node> list, int k) {
+    private int firstGte(List<Node> list, int k) {
         int low = 0, high = list.size() - 1;
         while (low <= high) {
             int mid = (low + high) / 2;
